@@ -77,21 +77,7 @@ public class FHistory extends Plugin {
 		});
 		
 		
-		Events.on(ConfigEvent.class, event -> {
-			System.out.println(event.value);
-			if(event.player != null) {
-				String xAndY = event.tile.x + " " + event.tile.y;
-				ArrayList<String> tileactionlist = new ArrayList<String>();
-				if(!tileactions.containsKey(xAndY)) {
-					tileactionlist.add(event.player.name + " [yellow]config'd [purple]" + event.tile.block());
-					tileactions.put(xAndY, tileactionlist);
-				} else {
-					tileactionlist = tileactions.get(xAndY);
-					tileactionlist.add(event.player.name + " [yellow]config'd [purple]" + event.tile.block());
-					tileactions.put(xAndY, tileactionlist);
-				}
-			}
-		});
+		
 		
 		
 		
